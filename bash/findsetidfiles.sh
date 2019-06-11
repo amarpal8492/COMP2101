@@ -13,11 +13,11 @@ echo "Setuid files:"
 echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 3
 echo ""
-echo "Setuid files:"
+echo "setgid files:"
 echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 3
 echo ""
 echo "top 10 largest files"
 #exec show diagnostic information relating to -exec, execdir, -ok and -okdir
-find $HOME -type f -exec ls -alh --block-size=M 2>/dev/null {} \; | sort -hr -ks | head -n 10
+find $HOME -type f -exec ls -alh --block-size=M 2>/dev/null {} \; | sort -hr -k5 | head -n 10
 echo""
