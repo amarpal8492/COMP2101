@@ -19,12 +19,12 @@ subtraction=$((firstnum - secondnum))
 multiplication=$((firstnum * secondnum))
 remainder=$((firstnum % secondnum))
 dividend=$((firstnum / secondnum))
-fpdividend=$(awk "BEGIN{printf \"%.2f\", $firstnum/$secondnum}")
+power=$((firstnum**secondnum))
 
 cat <<EOF
 $firstnum plus $secondnum is $sum
 $firstnum minus $secondnum is $subtraction
-$firstnum divided by $secondnum is $dividend, with the remainder of $remainder
 $firstnum times $secondnum is $multiplication
-  - More precisely, it is $fpdividend
+$firstnum divided by $secondnum is $dividend, with the remainder of $remainder
+$firstnum raised to the power of $secondnum is $power
 EOF
